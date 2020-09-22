@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>My Freelance Site</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div id="root">
+
+      <header class="styles_header">
+        <nav class="styles_main_navi">
+		  <span class="styles_home_bar"></span>
+	      <div class="styles_dd_menu">
+            <div id="dd_button" class="dd_btn" onclick="menuToggle(this);">
+              <div class="bar1" ></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>			
+			<div id="dd_menu" class="dd_content">
+			  <a href="home.html">Home</a>
+			  <a href="about.html">About</a>
+			  <a href="portfolio.html">Portfolio</a>
+			  <a href="contact.html">Contact</a>
+            </div>
+          </div>		
+		  <ul class="styles_list_links_navi">
+			<li class="styles_link"><a href="home.html">Home</a></li>
+			<li class="styles_link"><a href="about.html">About</a></li>
+			<li class="styles_link"><a href="portfolio.html">Portfolio</a></li>
+			<li class="styles_link"><a href="contact.html">Contact</a></li>
+	      </ul>
+		</nav>
+      </header>
+      <!-- Spacer for header -->
+      <div class="styles_header_spacer">
+        <nav class="styles_main_navi">
+          <span class="styles_home_bar"></span>
+          <div class="styles_dd_menu">
+            <div class="dd_btn" onclick="menuToggle(this);">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+            <div class="dd_content">
+              <a href="test.html">Home</a>
+              <a href="test.html">About</a>
+              <a href="test.html">Portfolio</a>
+              <a href="test.html">Contact</a>
+            </div>
+          </div>
+          <ul class="styles_list_links_navi">
+            <li class="styles_link"><a href="test.html">Home</a></li>
+            <li class="styles_link"><a href="test.html">About</a></li>
+            <li class="styles_link"><a href="test.html">Portfolio</a></li>
+            <li class="styles_link"><a href="test.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- End Spacer for header-->
+
+      <div class="main">
+        <h2 class="styles_main_text">Portfolio</h2>
+        <div class="underline_title"></div>
+        <div id="my_info">
+		<!-- Container Grid-->
+          <div class="container portfolio">
+		    		
+		    <div for="click" class="works1">
+			  <label for="click" class="click-me"><img src="img/promos_author.png" alt="author site"></label>
+			  
+			</div>
+			<!-- Pop up window with project details -->
+			  <div class="styles-center">    
+			    <input type="checkbox" id ="click">
+				
+				<div class="works1-more-info">
+				  <div class="works1-header">
+				    <h2>An Author's Website</h2>
+					<label for="click" class="fa fa-times wrk"></label>
+				  </div>
+				  <div class="par-statements">
+				    <h3>Challenge</h3>
+				    <p>Suppose a client is a writer that wants to have their own website where they can
+				      add author information, showcase books, and their contact details.</p>
+			        <h3>Action</h3>
+				    <p>I made a responsive website where the client's readers can visit to learn more 
+					  about them. This is a single-page site where the user may scroll down to 
+					  see various details about their author.</p>
+					  <img src="img/auth_prom02.png" alt="author responsive">
+					  <p>This includes
+					  an "about me" section, an interactive, side-scrolling "book shelf" that shows
+					  their novels and other literature and a page that has contact information for the writer.
+                      </p>
+					  <img src="img/auth_prom_showcase.png" alt="author showcase">
+					  <br>
+			        <h3>Result</h3>
+				    <p>Now both writer and reader can communicate with each other
+					  easier through the author's personal website. Furthermore, once the site
+					  is deployed, with the writer's 
+					  presence on the internet made more prominent, they will be able 
+					  to reach much more potential readers.</p>
+					<label for="click" class="demo-button"><a href="author_site/index.html" target="_blank">See Demo</a></label>
+					  
+				  </div>
+				  <div class="line"></div>
+				  <label for="click" class="close-me-button">Close</label>
+				</div>
+			  </div>
+			<!-- <div class="works2"><a href="#"><img src="img/promos_author.png" alt="author site"></a></div> -->
+          </div>
+		<!-- END Container Grid-->
+        </div>
+		<br>
+        <a class="styles_start_button" href="contact.html">Next</a>
+      </div>
+
+      <!--END root-->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="info-box">
+        <!--
+	    <div class="social_media_icons">
+		  <a href="http://www.youtube.com/" class="fa fa-facebook"></a>
+		  <a href="#" class="fa fa-google"></a>
+		  <a href="#" class="fa fa-linkedin"></a>
+		  <a href="#" class="fa fa-instagram"></a>
+		</div>
+    -->
+        <div class="footnote">
+          <p>JONATHAN TOLENTINO ©2020</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script/scripts.js"></script>
+  </body>
+
+</html>

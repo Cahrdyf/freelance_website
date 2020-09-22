@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Jane Author</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/author_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Solway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="styles-header">
+      <nav class="styles-navigation">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fa fa-navicon"></i>
+        </label>
+        <a class="style-auth-name" href="#about">Jane Author</a>
+        <ul>
+          <li><i class="fa fa-child"></i><a href="#about">About</a></li>
+          <li><i class="fa fa-book"></i><a href="#books">Books</a></li>
+          <li><i class="fa fa-mobile-phone"></i><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- End Header -->
+    <!-- SPACER Header -->
+    <header class="spacer-styles-header">
+      <nav class="spacer-styles-navigation">
+        <input type="checkbox" onchange="console.log(34)">
+        <label for="check" class="checkbtn">
+          <i class="fa fa-navicon"></i>
+        </label>
+        <a class="style-auth-name" href="#about">Jane Author</a>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- End SPACER Header -->
+    <div id="main">
+      <div class="main main-pic"></div>
+      <div class="overlay"></div>
+      <div class="logo">Your Logo Here</div>
+      <div id="about" class="style-text">
+        <h2>About Me</h2>
+        <p>Hello, my name is Jane Author. I have a passion for writing stories that
+          immerse the reader in a world of fantasy. Ever since I
+          was a child I have always loved to read. I have a passion for writing stories that
+          immerse the reader in a world of fantasy. Ever since I
+          was a child I have always loved to read. I have a passion for writing stories that
+          immerse the reader in a world of fantasy. Ever since I
+          was a child I have always loved to read.</p>
+      </div>
+      <hr>
+      <div id="books" class="style-text">
+        <h2>Showcase</h2>
+        <div class="marquee">
+          <ul class="marq-cont">
+            <li><a href="http://www.amazon.com/" target="_blank"><img src="img/book1.jpg"></a></li>
+            <li><a href="http://www.amazon.com/" target="_blank"><img src="img/book2.jpg"></a></li>
+            <li><a href="http://www.amazon.com/" target="_blank"><img src="img/book3.jpg"></a></li>
+            <li><a href="http://www.amazon.com/" target="_blank"><img src="img/book4.jpg"></a></li>
+            <li><a href="http://www.amazon.com/" target="_blank"><img src="img/book5.jpg"></a></li>
+            <li><a href="http://www.amazon.com/" target="_blank"><img src="img/book6.jpg"></a></li>
+          </ul>
+        </div>
+		<div class="bookshelf">
+          <ul>
+            <li><a href="http://www.amazon.com/" target="_blank"><img src="img/book1.jpg"></a></li>
+            <li><a href="http://www.amazon.com/" target="_blank"><img src="img/book2.jpg"></a></li>
+            <li><a href="http://www.amazon.com/" target="_blank"><img src="img/book3.jpg"></a></li>
+            <li><a href="http://www.amazon.com/" target="_blank"><img src="img/book4.jpg"></a></li>
+            <li><a href="http://www.amazon.com/" target="_blank"><img src="img/book5.jpg"></a></li>
+            <li><a href="http://www.amazon.com/" target="_blank"><img src="img/book6.jpg"></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div id="contact" class="style-text">
+        <h2>Get in touch!</h2>
+		    <div class="contact-form">
+			  <form id="contact-form" method="post" action="contact-form-handler.php">
+			    <input name="name" type="text" class="form-control" placeholder="Name" required>
+			    <br>
+			    <input name="email" type="email" class="form-control" placeholder="Enter email" required>
+			    <br>
+			    <textarea name="message" class="form-control" placeholder="Your Message" rows="4" required></textarea>
+			    <br>
+			    <input type="submit" class="form-control submit" value="SUBMIT">
+			 </form>
+			</div>
+          </div>
+        </div>
+      </div>
+    <!-- Footer -->
+    <footer>
+	  <div class="newsletter">
+	    <h4>Sign up for Jane Author's Newsletter for updates on her writing, events, and much more!</h4>
+	      <form id="newsletter-form" method="post" action="newsletter-form-handler.php">
+		    <input name="email" type="email" class="ns-form-control" placeholder="Enter email" required>
+		    <br>
+		    <input type="submit" class="form-control ns-submit" value="SIGN UP">
+          </form>		
+	  </div>
+	    <div class="social_media_icons">
+		  <a href="http://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+		  <a href="http://www.google.com/" class="fa fa-google" target="_blank"></a>
+		  <a href="http://www.linkedin.com/" class="fa fa-linkedin" target="_blank"></a>
+		  <a href="http://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+		</div>	  
+      <p>© 2020 Jane Author</p>
+    </footer>
+    <!-- End Footer -->
+	<script src="script/scripts.js"></script>
+  </body>
+
+</html>

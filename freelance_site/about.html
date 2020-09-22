@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>My Freelance Site</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div id="root">
+
+      <header class="styles_header">
+        <nav class="styles_main_navi">
+		  <span class="styles_home_bar"></span>
+	      <div class="styles_dd_menu">
+            <div id="dd_button" class="dd_btn" onclick="menuToggle(this);">
+              <div class="bar1" ></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>			
+			<div id="dd_menu" class="dd_content">
+			  <a href="home.html">Home</a>
+			  <a href="about.html">About</a>
+			  <a href="portfolio.html">Portfolio</a>
+			  <a href="contact.html">Contact</a>
+            </div>
+          </div>		
+		  <ul class="styles_list_links_navi">
+			<li class="styles_link"><a href="home.html">Home</a></li>
+			<li class="styles_link"><a href="about.html">About</a></li>
+			<li class="styles_link"><a href="portfolio.html">Portfolio</a></li>
+			<li class="styles_link"><a href="contact.html">Contact</a></li>
+	      </ul>
+		</nav>
+      </header>
+      <!-- Spacer for header -->
+      <div class="styles_header_spacer">
+        <nav class="styles_main_navi">
+          <span class="styles_home_bar"></span>
+          <div class="styles_dd_menu">
+            <div class="dd_btn" onclick="menuToggle(this);">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+            <div class="dd_content">
+              <a href="home.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="portfolio.html">Portfolio</a>
+              <a href="test.html">Contact</a>
+            </div>
+          </div>
+          <ul class="styles_list_links_navi">
+            <li class="styles_link"><a href="home.html">Home</a></li>
+            <li class="styles_link"><a href="about.html">About</a></li>
+            <li class="styles_link"><a href="test.html">Portfolio</a></li>
+            <li class="styles_link"><a href="test.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- End Spacer for header-->
+
+      <div class="main">
+        <h2 class="styles_main_text">About me</h2>
+        <div class="underline_title"></div>
+        <div id="my_info">
+          <div class="container about">
+            <div id="name_box">
+              <img src="img/test_pfp.jpg" style="width:100%" alt="Avatar">
+              <h3>Jonathan Tolentino</h3>
+			  
+			  <div class="about_text">I am a freelancer who lives in Fairfield, California.
+			  I enjoy making websites for clients that are want their own, perhaps for their
+			  small business where they sell their products, show off their artwork, etc..
+			  I love to keep up-to-date with the current trends in web design. My websites are
+			  responsive, making them easy to view on different devices, such as smartphones
+			  and tablets. I am eager to learn more and more about web development, both
+			  front-end and back-end concepts.
+			  </div>
+			  
+              <li>
+                <i style="font-size:24px" class="fa">&#xf0b1;</i>
+                Freelance Web Developer
+              </li>
+              <li>
+                <i style="font-size:24px" class="fa">&#xf015;</i>
+                Fairfield, CA
+              </li>
+              <li>
+                <i style="font-size:24px" class="fa">&#xf0e0;</i>
+                tolentinoj7@gmail.com
+              </li>
+              <li>
+                <i style="font-size:24px" class="fa">&#xf10b;</i>
+                1-707-416-9845
+              </li>
+            </div>
+            <div id="skill_box">
+              <h3>Knowledge</h3>
+              <p>HTML<span class="bar"><span class="skill_html"></span></span>
+                <span class="percent_skill">75</span>%</p>
+
+              <p>CSS<span class="bar"><span class="skill_css"></span></span>
+                <span class="percent_skill">75</span>%</p>
+
+              <p>JAVASCRIPT<span class="bar"><span class="skill_javascript"></span></span>
+                <span class="percent_skill">60</span>%</p>
+
+              <p>NODE.JS<span class="bar"><span class="skill_nodejs"></span></span>
+                <span class="percent_skill">30</span>%</p>
+<!--
+              <p>REACT<span class="bar"><span class="skill_react"></span></span>
+                <span class="percent_skill">5</span>%</p>
+-->
+            </div>
+            <div id="education_box">
+              <h3>Education</h3>
+              <div class="edu_container">
+                <h5>CSU East Bay</h5>
+                <h6>2018-2020</h6>
+                <p>Bachelor Degree in Computer Science</p>
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+		<br>
+        <a class="styles_start_button" href="portfolio.html">Next</a>
+      </div>
+
+      <!--END root-->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="info-box">
+        <!--
+	    <div class="social_media_icons">
+		  <a href="http://www.youtube.com/" class="fa fa-facebook"></a>
+		  <a href="#" class="fa fa-google"></a>
+		  <a href="#" class="fa fa-linkedin"></a>
+		  <a href="#" class="fa fa-instagram"></a>
+		</div>
+    -->
+        <div class="footnote">
+          <p>JONATHAN TOLENTINO ©2020</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script/scripts.js"></script>
+  </body>
+
+</html>
