@@ -190,29 +190,6 @@ p {
   border: 2px solid #f0f0f0;
 }
 
-.hide {
-  display: none;
-}
-
-#books .bookshelf ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-#books .bookshelf ul > li{
-  background-color: #f1f1f1;
-  text-align: center;
-  line-height: 1em;
-  margin: 2rem .5rem 1rem .5rem;
-  padding: 0;
-}
-#books .bookshelf img{
-  width: 60%;
-  height: auto;
-}
-
 form {
   margin-top: 25px;
   transition: all 4s ease-in-out;
@@ -438,10 +415,4 @@ i {
   form .ns-submit {
   width: 25%;
   }
-  
-  #books .bookshelf img{
-    width: 25vw;
-    height: auto;
-  }
-  
 }
