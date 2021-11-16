@@ -1,0 +1,211 @@
+
+.spacer-header {
+  margin: 24vw 0;
+}
+
+.spacer-g2 {
+  margin: 12vw 0;
+}
+
+.spacer-g3 {
+  margin: 6vw 0;
+}
+
+.spacer-g3-btm {
+  margin: 26vw 0;
+}
+
+.hide {
+  display: none ! important;
+}
+
+.orb {
+  position: absolute; 
+  left: 0; 
+  top: 36em;
+  overflow: hidden; 
+  z-index: 999999;
+}
+
+@media only screen and (min-width: 1012px) {
+  .orb {
+    top: 20em;
+  }
+}
+
+@media only screen and (min-width: 1688px) {
+  .spacer-header {
+    margin: 24vw 0;
+  }
+
+  .spacer-g2 {
+    margin: 16vw 0;
+  }
+
+  .spacer-g3 {
+    margin: 14vw 0;
+  }
+
+  .spacer-g3-btm {
+    margin: 20vw 0;
+  }
+}
+
+@media only screen and (min-width: 1899px) {
+  .spacer-header {
+    margin: 28vw 0;
+  }
+
+  .spacer-g2 {
+    margin: 12vw 0;
+  }
+
+  .spacer-g3 {
+    margin: 14vw 0;
+  }
+
+  .spacer-g3-btm {
+    margin: 38vw 0;
+  }
+  
+  .group4-bg {
+    margin-top: -50em;
+  }
+  
+  .orb {
+    top: 56em;
+  }
+  
+}
+
+@media only screen and (min-width: 2024px) {
+  .spacer-header {
+    margin: 31vw 0;
+  }
+
+  .spacer-g2 {
+    margin: 15vw 0;
+  }
+
+  .spacer-g3 {
+    margin: 12vw 0;
+  }
+
+  .spacer-g3-btm {
+    margin: 44vw 0;
+  }
+  
+  .group4-bg {
+    margin-top: -60em;
+  }
+  
+  .orb {
+    top: 60em;
+  }
+
+}
+
+@media only screen and (min-width: 2278px) {
+  .spacer-header {
+    margin: 31vw 0;
+  }
+
+  .spacer-g2 {
+    margin: 20vw 0;
+  }
+
+  .spacer-g3 {
+    margin: 16vw 0;
+  }
+
+  .spacer-g3-btm {
+    margin: 44vw 0;
+  }
+  
+  .group4-bg {
+    margin-top: -60em;
+  }
+  
+  .orb {
+    top: 70em;
+  }
+}
+
+@media only screen and (min-width: 3038px) {
+  .spacer-header {
+    margin: 31vw 0;
+  }
+
+  .spacer-g2 {
+    margin: 20vw 0;
+  }
+
+  .spacer-g3 {
+    margin: 16vw 0;
+  }
+
+  .spacer-g3-btm {
+    margin: 44vw 0;
+  }
+  
+  .group4-bg {
+    margin-top: -90em;
+  }
+  .orb {
+    top: 100em;
+  }
+}
+
+@media only screen and (min-width: 3513px) {
+  .spacer-header {
+    margin: 36vw 0;
+  }
+
+  .spacer-g2 {
+    margin: 20vw 0;
+  }
+
+  .spacer-g3 {
+    margin: 24vw 0;
+  }
+
+  .spacer-g3-btm {
+    margin: 44vw 0;
+  }
+  
+  .group4-bg {
+    margin-top: -60em;
+  }
+  
+  .orb {
+    top: 186em;
+  }
+  
+}
+
+@media only screen and (min-width: 4557px) {
+  .spacer-header {
+    margin: 36vw 0;
+  }
+
+  .spacer-g2 {
+    margin: 20vw 0;
+  }
+
+  .spacer-g3 {
+    margin: 24vw 0;
+  }
+
+  .spacer-g3-btm {
+    margin: 44vw 0;
+  }
+  
+  .group4-bg {
+    margin-top: -76em;
+  }
+  
+  .orb {
+    top: 258em;
+  }
+}
+
