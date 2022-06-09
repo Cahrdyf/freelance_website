@@ -1,348 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Heroscape Base Defender</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
-	<style>
-	  *{box-sizing: border-box;}
-	  body{background-color: black; color:white; width: 92%; margin:auto;}
-	</style>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: black;
+        color: white;
+        width: 92%;
+        margin: auto;
+      }
+
+    </style>
   </head>
+
   <body>
     <div style="text-align: center;">
       <h1>Heroscape Base Defender</h1>
-	  <img src="https://i.pinimg.com/736x/86/23/b1/8623b108eaa86b62cd40a10af4ab5f07.jpg" 
-	  alt="ghetto_knight" style="width:90vw; height:50vw;">
-	</div>
-	
-	<div>
-	  <h2>Objective:</h2>
-	</div>
-	<div>
-	  Destroy the other player(s) base/ancient!
-	</div>
-	<br>
-	<div>
-	  Winner: Player with the last ancient or army standing.
-	</div>
-	<div>
-	  Loser(s): Players who have lost their ancient/had them destroyed by the other players.
-	</div>
-	<br>
-	<hr>
-	<br>
-	<div>
-	  <div>
-	    <h3>THE ANCIENT</h3>
-		<br>
-		<div>
-		  <p>The ancient is a special 7-space tile that the enemy players must attack.</p>
-		</div>
-		<div>
-		  <img src="https://i.imgur.com/i8Mg7mM.jpg" style="width:50vw; height:auto;">
-		</div>
-		<div>
-		  <p>To completely destroy an ancient, an enemy was attack and destroy the numbered "outer"
-		     tiles/nodes. (Any order)</p>
-			 
-		  <p>An enemy cannot destroy the "The Core" (The "X" tile) until all outer tiles/nodes are destroyed.</p>
-		  
-		  <p>
-		    <b>Important information for setting up your ancient:</b>
-		    <br>
-			<ol>
-			  <li>
-			    Must be reachable by all sides; at least have one tile space bordering the ancient.
-			  </li>
-			  <li>
-			    Ancients must be equidistant from each other; on opposite ends of the map. 
-			  </li>
-			  <li>
-			    The path to each must to be reachable by heroes without flying ability, both back
-				and forth. (No one way cliffs/pits, etc.)
-			  </li>
-			</ol>
-		  </p>
-		  
-		  <div>
-		    <p><b>ANCIENT STATS (Per Node/Tile)</b></p>
-		    <ul>
-			  <li>
-			    Hitpoints: 1/1 (<i>Since there are 7 nodes, think 7 total hitpoints.</i>)
-			  </li>
-			  <li>
-			    Move: 0
-			  </li>
-			  <li>
-			    Attack: 0 (<i>Cannot attack!</i>)
-			  </li>
-			  <li>
-			    Defense: 3
-			  </li>
-			  <li>
-			    <span style="color: gold"><b>Magic Immunity:</b></span> The ancients are immune to
-				ability damage. (Dragon's fire breath, grenades, etc.)
-			  </li>
-			</ul>
-		  </div>
-		  
-		</div>
-		<div>
-		  <div id="full">
-		    <div style="position: relative; font-size: 4vw;">
-		      <div style="position: absolute; z-index:99; top: 8vw; left: 16vw;">
-		        1
-			  </div>
-			  <div style="position: absolute; z-index:99; top: 8vw; left: 32vw;">
-		        2
-			  </div>
-			  <div style="position: absolute; z-index:99; top: 22vw; left: 40vw;">
-		        3
-			  </div>
-			  <div style="position: absolute; z-index:99; top: 22vw; left: 8vw;">
-		        4
-			  </div>
-			  <div style="position: absolute; z-index:99; top: 36vw; left: 16vw;">
-		        5
-			  </div>
-			  <div style="position: absolute; z-index:99; top: 36vw; left: 32vw;">
-		        6
-			  </div>
-			  <div style="position: absolute; z-index:99; top: 22vw; left: 24vw; color:red; font-weight:900;">
-		        X
-			  </div>
-			  <img src="https://i.imgur.com/i8Mg7mM.jpg" style="width:50vw; height:auto;">
-		    </div>
-		  </div>
-		</div>
-	  </div>
-	  <div>
-	    <h3>Glyphs</h3>
-		<div>
-		  <p>Glyphs are possessable items in this gamemode. You will permanently gain the bonuses
-		  when one of your heroes picks it up, but only each player can only have ONE glyph at
-		  a time. If a player wishes to pick up one they like better, their current one is either:<br> a.) destroyed
-		  and discarded from play or <br>b.) Dropped in the place where they picked it up. 
-		  <br><br>They keep the new glyph and take the new bonuses and lose the old ones. 
-		  <br><br>
-		  After taken, players can Glyphs can be dropped/abandoned on any tile; a player can also destroy glyphs 
-		  for free/without combat if it is in their possession or they pick it up/land on it
-		  to "deny" it for other players.	  
-		  </p>
-		</div>
-		<h3>What does the Glyph of Brandar do?</h3>
-		<img src="https://i.imgur.com/eLq1ojp.png" style="width: 20vw; height: auto;">
-		<div>
-		  <p>The <b>Glyph of Brandar</b> can only be obtained after slaying 
-		    <a href="#champ" style="color: lime;">"The Champion" (click me to jump to section)</a>
-			Upon death, the glyph is dropped where the champion once stood. (WARNING: A glyph is
-			NOT picked up until a player's unit lands on it. Thus, they can be "stolen" from the
-			slayer!
-		  </p>
-		  <p>
-		    After landing on the glyph and deciding what to do with a previously owned glyph
-			(if you had one), Roll the 20-sided die. <br>
-			Do the following based on the result [for results higher than 10, minus 10. For example
-			17 would be 7, 20 would be 10, 11 would be 1, etc.]:<br>
-			
-			<br><br><img src="https://i.imgur.com/tL6v2Ho.png" style="width:50vw;">
-			
-			<br><br>1 = <b><span style="color: orange;">Immortality:</span></b> The gods give you 
-			        another chance. 
-					Bring back one dead hero, 
-					giving them full health and refreshing abilities. 
-					If you choose to pick a squad, bring
-			        all of them back. For squads with survivors, 
-					bring all units back and remove all damage
-			        from all units. (Cannot be used if all members are alive.)
-					
-					<br><br><img src="https://i.imgur.com/iZmoJIr.png" style="width:50vw;">
-					
-			<br><br>2 = <b><span style="color: lime;">Dragon's Bond:</span></b>
-			        The gods offer you the restless soul of powerful dragon's ancestor. Give to a hero or a single
-					member of a squad; keep the token underneath the chosen unit. That unit gains all of Mimring's abilities. When unit dies or is removed from play, discard
-					Dragon's Bond from play. Inherits Mimring's movement speed if it is greater than
-					the units base value. If the unit you chose was Mimring, nothing happens and 
-					the glyph is destroyed. [MUST BE USED IMMEDIATELY. DESTROY OTHERWISE]
-					
-					<br><br><img src="https://i.imgur.com/IYL0pvW.png" style="width:50vw;">
-					
-			<br><br>3 = <b><span style="color: aqua;">Wrath of Heaven:</span></b> The gods
-			        smite your enemies. Use to deal up to 5 points of damage to any of the enemy player units on the map. Can be spread out to different players. 
-					(Example: 2 to one of Player A's heroes and 3 to one of Player B's Hero). Cannot be dealt on heroes who are on their last hitpoint. Squad units may be killed by
-					this effect. Discard after use.
-					
-					<br><br><img src="https://i.imgur.com/zUBQtDO.png" style="width:50vw;">
-	
-			<br><br>4 = <b><span style="color: pink;">Vitality:</span></b> The gods heal you. 
-			        Use to remove up to 5 hitpoints from any of your units.(Discard after use.)
-					
-					<br><br><img src="https://i.imgur.com/rjpFdw4.png" style="width:50vw;">
-					
-			<br><br>5 = <b><span style="color: yellow;">Glimpse:</span></b> Strange energies surround the Champion's house. Re-roll!
-			
-			<br><br><img src="https://i.imgur.com/HkOpK3r.png" style="width:50vw;">
-			
-			<br><br>6 = <b><span style="color: red;">Candy Bar:</span></b>
-			        The gods do not respond, so you just loot the Champion's house.
-					You find a candy bar underneath a piece of furniture. It looks very old but the
-					packaging is still sealed!
-					Use to heal 1 hitpoint from
-					any of your units. (Discard after use.)
-					
-					<br><br><img src="https://i.imgur.com/i6XgiBw.png" style="width:50vw;">
-					
-			<br><br>7 = <b><span style="color: lime;">Rune of Clairvoyance:</span></b>
-			        The gods do not respond, so you just loot the Champion's house.
-					You find an odd glowing crystal shaped like an eye.
-					Use anytime during your turn to reveal all enemy players' order markers.
-					Discard after use.
-					
-					<br><br><img src="https://i.imgur.com/yNDijIh.png" style="width:50vw;">
-					
-			<br><br>8 = <b><span style="color: gold;">Diamond Splitter:</span></b>
-			        The gods do not respond, so you just loot the Champion's house.
-					You find an enchanted maul capable of tearing down castles.
-					Give to one hero or unit and place it under them.
-					For each <b>non-ranged</b> attack on an ancient, roll a 20-sided die.
-					If you roll a 1 or 10 (or any number in between) you find a weak point
-					and attack the core directly regardless of undamaged surrounding nodes.
-					Roll defense dice for ancient like normal.
-					
-					<br><br><img src="https://i.imgur.com/mcbDrtd.png" style="width:50vw;">
-					
-			<br><br>9 = <b><span style="background-color: white; color: Purple;">Masamune:</span></b>
-			        The gods do not respond, so you just loot the Champion's house. You find
-					a katana (japanese sword) possessed by the ghost of a legendary samurai. Give to one
-					hero or unit and place it under them. They gain the "counter-strike"
-					ability (See existing ability for samurai units.) Does nothing and is destroyed
-				    immediately if given to a unit that already has this special.
-					When possessing unit dies, discard the Masamune from play.
-					
-					<br><br><img src="https://i.imgur.com/4kpsrE5.png" style="width:50vw;">
-					
-			<br><br>10 = <b><span style="color: Grey;">Rusty Sword:</span></b>
-			        The gods do not respond, so you just loot the Champion's house. You find
-					an old, plain longsword they probably kept for sentimental purposes. Give to one
-					hero or unit and place it under them. They get +1 attack dice in non-ranged combat.
-					When possessing unit dies, discard the Rusty Sword from play.
+      <img src="https://i.pinimg.com/736x/86/23/b1/8623b108eaa86b62cd40a10af4ab5f07.jpg" alt="ghetto_knight" style="width:90vw; height:50vw;">
+    </div>
 
-		  </p>
-		</div>
-	  </div>
-	  
-	  <div id="champ">
-	    <h3>The Champion</h3>
-		<img src="https://i.imgur.com/y1VhuMF.png" style="width:50vw;">
-		<p style="font-style: italic; text-align: center;">
-		  A warrior of great power 
-		  and military prowess that's seen
-		  many battles in their extraordinary life. The gods favor them and
-		  rumors say they've
-		  collected many rare artifacts in their numerous adventures.
-		</p>
-		
-		<p>
-		  <b>Choosing a champ</b>
-		</p>
-		<p>
-		  Before choosing heroes and units for their army, the players must vote on a hero (no squads)
-		  to be the Champ. Note that this hero will be not be available if chosen as the Champ. 
-		  After potential champs are chosen, each player rolls the 20-sided die. Whoever rolls
-		  the highest number has their selected hero become the champ for this game.
-		</p>
-		
-		<p>
-		  <b>Setting up the champ</b>
-		</p>
-		
-		<p>
-		  The champ is a formidable opponent.<br>
-		  Apply the following to the champ:
-		  <ol>
-		    <li>+3 move for each participating player</li>
-		    <li>+2 hitpoints for each participating player</li>
-			<li>+1 attack dice for each participating player</li>
-			<li>+1 defense dice for each participating player</li>
-			<li>Pre-existing abilities are the same.</li>
-			<li>Place Glyph of Brandar under champ's unit.</li>
-		  </ol>
-		</p>
-		
-		<p>
-		  <b>Champ's Lair</b>
-		</p>
-		
-		<p>
-		  The champ starts off in their "lair". Place a 7-tile on the map
-		  as equidistant as possible from all the players (the center of the map).
-		</p>
-		
-		<p>
-		  <b>The Champ's Behavior</b>
-		</p>
-		
-		<p>
-		  All order markers will alway be placed on the champ's card since it is a single unit.
-		  They are <b>dormant</b> until someone attacks them. When attacked they become active and
-		  will move toward and attack the unit that attacked them. (Mark the champs target with
-		  a token.) They will keep attacking/pursuing that unit until they are slain or attacked by 
-		  another unit. The new attacking unit gets targeted, so the target token moves to that unit.
-		</p>
-		
-		<p>
-		  The champ will take the shortest path possible to the attacking unit.
-		  The <b>Glyph of Brandar</b> always follows the champ, kept below the unit.
-		  When slain, the champ leaves the glyph behind; the next unit to land on the glyph 
-		  (even if it's not the slayer's) may take the glyph or just destroy and deny it.
-		</p>
-		
-		<p>
-		  If the champ has destroyed their target, they will return back to their lair (taking the shortest path possible) and become dormant. Any unit that attacks them, however, will become 
-		  the new target.
-		</p>
-		
-		<p>
-		  The champ always ignores and can't use <b>Glyphs</b>.
-		</p>
-		
-		
-		
-		
-	  </div>
-	  
-	  <div>
-	    <h3>Ranged Attacks on an Ancient</h3>
-		
-		<p>
-		  <b>Facing Walls</b>
-		</p>
-		
-		<p>
-		  Assume that the ancients are rather tall structures. Ranged units can only attack
-		  the the tiles/nodes that are facing them. They cannot shoot through them to get at a node
-		  in the back.
-		</p>
-		
-		<img src="https://i.imgur.com/JjSOyOF.png" style="width:90vw; height:auto;">
-		
-		<p>
-		  <b>Ranged Attack Resistance</b>
-		</p>
-		
-		<p>
-		  Nodes get +1 defense die against all ranged attacks. 
-		  Cores get +2 defense dice against all ranged attacks.
-		</p>
-		
-	  </div>
-	  
-	</div>
-	
-	
-	<!-- <script src="index.js"></script> -->
+    <div>
+      <h2>Objective:</h2>
+    </div>
+    <div>
+      Destroy the other player(s) base/ancient!
+    </div>
+    <br>
+    <div>
+      Winner: Player with the last ancient or army standing.
+    </div>
+    <div>
+      Loser(s): Players who have lost their ancient/had them destroyed by the other players.
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+      <div>
+        <h3>THE ANCIENT</h3>
+        <br>
+        <div>
+          <p>The ancient is a special 7-space tile that the enemy players must attack.</p>
+        </div>
+        <div>
+          <img src="https://i.imgur.com/i8Mg7mM.jpg" style="width:50vw; height:auto;">
+        </div>
+        <div>
+          <p>To completely destroy an ancient, an enemy was attack and destroy the numbered "outer"
+            tiles/nodes. (Any order)</p>
+
+          <p>An enemy cannot destroy the "The Core" (The "X" tile) until all outer tiles/nodes are destroyed.</p>
+
+          <p>
+            <b>Important information for setting up your ancient:</b>
+            <br>
+            <ol>
+              <li>
+                Must be reachable by all sides; at least have one tile space bordering the ancient.
+              </li>
+              <li>
+                Ancients must be equidistant from each other; on opposite ends of the map.
+              </li>
+              <li>
+                The path to each must to be reachable by heroes without flying ability, both back
+                and forth. (No one way cliffs/pits, etc.)
+              </li>
+            </ol>
+          </p>
+
+          <div>
+            <p><b>ANCIENT STATS (Per Node/Tile)</b></p>
+            <ul>
+              <li>
+                Hitpoints: 1/1 (<i>Since there are 7 nodes, think 7 total hitpoints.</i>)
+              </li>
+              <li>
+                Move: 0
+              </li>
+              <li>
+                Attack: 0 (<i>Cannot attack!</i>)
+              </li>
+              <li>
+                Defense: 3
+              </li>
+              <li>
+                <span style="color: gold"><b>Magic Immunity:</b></span> The ancients are immune to
+                ability damage. (Dragon's fire breath, grenades, etc.)
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div>
+          <div id="full">
+            <div style="position: relative; font-size: 4vw;">
+              <div style="position: absolute; z-index:99; top: 8vw; left: 16vw;">
+                1
+              </div>
+              <div style="position: absolute; z-index:99; top: 8vw; left: 32vw;">
+                2
+              </div>
+              <div style="position: absolute; z-index:99; top: 22vw; left: 40vw;">
+                3
+              </div>
+              <div style="position: absolute; z-index:99; top: 22vw; left: 8vw;">
+                4
+              </div>
+              <div style="position: absolute; z-index:99; top: 36vw; left: 16vw;">
+                5
+              </div>
+              <div style="position: absolute; z-index:99; top: 36vw; left: 32vw;">
+                6
+              </div>
+              <div style="position: absolute; z-index:99; top: 22vw; left: 24vw; color:red; font-weight:900;">
+                X
+              </div>
+              <img src="https://i.imgur.com/i8Mg7mM.jpg" style="width:50vw; height:auto;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>Glyphs</h3>
+        <div>
+          <p>Glyphs are possessable items in this gamemode. You will permanently gain the bonuses
+            when one of your heroes picks it up, but only each player can only have ONE glyph at
+            a time. If a player wishes to pick up one they like better, their current one is either:<br> a.) destroyed
+            and discarded from play or <br>b.) Dropped in the place where they picked it up.
+            <br><br>They keep the new glyph and take the new bonuses and lose the old ones.
+            <br><br>
+            After taken, players can Glyphs can be dropped/abandoned on any tile; a player can also destroy glyphs
+            for free/without combat if it is in their possession or they pick it up/land on it
+            to "deny" it for other players.
+          </p>
+        </div>
+        <h3>What does the Glyph of Brandar do?</h3>
+        <img src="https://i.imgur.com/eLq1ojp.png" style="width: 20vw; height: auto;">
+        <div>
+          <p>The <b>Glyph of Brandar</b> can only be obtained after slaying
+            <a href="#champ" style="color: lime;">"The Champion" (click me to jump to section)</a>
+            Upon death, the glyph is dropped where the champion once stood. (WARNING: A glyph is
+            NOT picked up until a player's unit lands on it. Thus, they can be "stolen" from the
+            slayer!
+          </p>
+
+          <p>
+            After landing on the glyph and deciding what to do with a previously owned glyph
+            (if you had one), Roll the 20-sided die. <br>
+            Do the following based on the result [for results higher than 10, minus 10. For example
+            17 would be 7, 20 would be 10, 11 would be 1, etc.]:<br>
+
+            <br><br><img src="https://i.imgur.com/tL6v2Ho.png" style="width:50vw;">
+
+            <br><br>1 = <b><span style="color: orange;">Immortality:</span></b> The gods give you
+            another chance.
+            Bring back one dead hero,
+            giving them full health and refreshing abilities.
+            If you choose to pick a squad, bring
+            all of them back. For squads with survivors,
+            bring all units back and remove all damage
+            from all units. (Cannot be used if all members are alive.)
+
+            <br><br><img src="https://i.imgur.com/iZmoJIr.png" style="width:50vw;">
+
+            <br><br>2 = <b><span style="color: lime;">Dragon's Bond:</span></b>
+            The gods offer you the restless soul of powerful dragon's ancestor. Give to a hero (no squad units); keep the token underneath the chosen unit. That unit gains all of Mimring's abilities. When unit dies or is removed from play, discard
+            Dragon's Bond from play. Inherits Mimring's movement speed if it is greater than
+            the units base value. If the unit you chose was Mimring, nothing happens and
+            the glyph is destroyed. [MUST BE USED IMMEDIATELY. DESTROY OTHERWISE]
+
+            <br><br><img src="https://i.imgur.com/IYL0pvW.png" style="width:50vw;">
+
+            <br><br>3 = <b><span style="color: aqua;">Wrath of Heaven:</span></b> The gods
+            smite your enemies. Use at anytime during your turn to deal up to 5 points of damage to any of the enemy player units on the map. Can be spread out to different players.
+            (Example: 2 to one of Player A's heroes and 3 to one of Player B's Hero). Cannot be dealt on heroes who are on their last hitpoint. Squad units may be killed by
+            this effect. Discard after use.
+
+            <br><br><img src="https://i.imgur.com/zUBQtDO.png" style="width:50vw;">
+
+            <br><br>4 = <b><span style="color: pink;">Vitality:</span></b> The gods heal you.
+            Use at anytime during your turn to remove up to 5 hitpoints from any of your units.(Discard after use.)
+
+            <br><br><img src="https://i.imgur.com/rjpFdw4.png" style="width:50vw;">
+
+            <br><br>5 = <b><span style="color: yellow;">Glimpse:</span></b> Strange energies surround the Champion's house. Re-roll immediately!
+
+            <br><br><img src="https://i.imgur.com/HkOpK3r.png" style="width:50vw;">
+
+            <br><br>6 = <b><span style="color: red;">Candy Bar:</span></b>
+            <b>[ITEM, CONSUMABLE]</b> The gods do not respond, so you just loot the Champion's house.
+            You find a candy bar underneath a piece of furniture. It looks very old but the
+            packaging is still sealed!
+            Use to heal 1 hitpoint from
+            any of your units. (Discard after use.)
+
+            <br><br><img src="https://i.imgur.com/i6XgiBw.png" style="width:50vw;">
+
+            <br><br>7 = <b><span style="color: lime;">Rune of Clairvoyance:</span></b>
+            <b>[ITEM, CONSUMABLE]</b> The gods do not respond, so you just loot the Champion's house.
+            You find an odd glowing crystal shaped like an eye.
+            Use anytime during your turn to reveal all enemy players' order markers.
+            Discard after use.
+
+            <br><br><img src="https://i.imgur.com/yNDijIh.png" style="width:50vw;">
+
+            <br><br>8 = <b><span style="color: gold;">Diamond Splitter:</span></b>
+            <b>[ITEM, WEAPON]</b> The gods do not respond, so you just loot the Champion's house.
+            You find an enchanted maul capable of tearing down castles.
+            Give to one hero (no squad units) and place it under them.
+            For each <b>non-ranged</b> attack on an ancient, roll a 20-sided die.
+            If you roll a 1 or 10 (or any number in between) you find a weak point
+            and attack the core directly regardless of undamaged surrounding nodes.
+            Roll defense dice for ancient like normal.
+
+            <br><br><img src="https://i.imgur.com/mcbDrtd.png" style="width:50vw;">
+
+            <br><br>9 = <b><span style="background-color: white; color: Purple;">Masamune:</span></b>
+            <b>[ITEM, WEAPON]</b> The gods do not respond, so you just loot the Champion's house. You find
+            a katana (japanese sword) possessed by the ghost of a legendary samurai. Give to one
+            hero (no squad units) and place it under them. They gain the "counter-strike"
+            ability (See existing ability for samurai units.) Does nothing and is destroyed
+            immediately if given to a unit that already has this special.
+            When possessing unit dies, discard the Masamune from play.
+
+            <br><br><img src="https://i.imgur.com/4kpsrE5.png" style="width:50vw;">
+
+            <br><br>10 = <b><span style="color: Grey;">Rusty Sword:</span></b>
+            <b>[ITEM, WEAPON]</b> The gods do not respond, so you just loot the Champion's house. You find
+            an old, plain longsword they probably kept for sentimental purposes. Give to one
+            hero (no squad units) and place it under them. They get +1 attack dice in non-ranged combat.
+            When possessing unit dies, discard the Rusty Sword from play.
+
+          </p>
+        </div>
+      </div>
+
+      <div id="champ">
+        <h3>The Champion</h3>
+        <img src="https://i.imgur.com/y1VhuMF.png" style="width:50vw;">
+        <p style="font-style: italic; text-align: center;">
+          A warrior of great power
+          and military prowess that's seen
+          many battles in their extraordinary life. The gods favor them and
+          rumors say they've
+          collected many rare artifacts in their numerous adventures.
+        </p>
+
+        <p>
+          <b>Choosing a champ</b>
+        </p>
+        <p>
+          Before choosing heroes and units for their army, the players must vote on a hero (no squads)
+          to be the Champ. Note that this hero will be not be available if chosen as the Champ.
+          After potential champs are chosen, each player rolls the 20-sided die. Whoever rolls
+          the highest number has their selected hero become the champ for this game.
+        </p>
+
+        <p>
+          <b>Setting up the champ</b>
+        </p>
+
+        <p>
+          The champ is a formidable opponent.<br>
+          Apply the following to the champ:
+          <ol>
+            <li>+3 move for each participating player</li>
+            <li>+2 hitpoints for each participating player</li>
+            <li>+1 attack dice for each participating player</li>
+            <li>+1 defense dice for each participating player</li>
+            <li>Pre-existing abilities are the same.</li>
+            <li>Place Glyph of Brandar under champ's unit.</li>
+          </ol>
+        </p>
+
+        <p>
+          <b>Champ's Lair</b>
+        </p>
+
+        <p>
+          The champ starts off in their "lair". Place a 7-tile on the map
+          as equidistant as possible from all the players (the center of the map).
+        </p>
+
+        <p>
+          <b>The Champ's Behavior</b>
+        </p>
+
+        <p>
+          All order markers will alway be placed on the champ's card since it is a single unit.
+          They are <b>dormant</b> until someone attacks them. When attacked they become active and
+          will move toward and attack the unit that attacked them. (Mark the champs target with
+          a token.) They will keep attacking/pursuing that unit until they are slain or attacked by
+          another unit. The new attacking unit gets targeted, so the target token moves to that unit.
+        </p>
+
+        <p>
+          The champ will take the shortest path possible to the attacking unit.
+          The <b>Glyph of Brandar</b> always follows the champ, kept below the unit.
+          When slain, the champ leaves the glyph behind; the next unit to land on the glyph
+          (even if it's not the slayer's) may take the glyph or just destroy and deny it.
+        </p>
+
+        <p>
+          If the champ has destroyed their target, they will return back to their lair (taking the shortest path possible) and become dormant. Any unit that attacks them, however, will become
+          the new target.
+        </p>
+
+        <p>
+          The champ always ignores and can't use <b>Glyphs</b>.
+        </p>
+
+
+
+
+      </div>
+
+      <div>
+        <h3>Ranged Attacks on an Ancient</h3>
+
+        <p>
+          <b>Facing Walls</b>
+        </p>
+
+        <p>
+          Assume that the ancients are rather tall structures. Ranged units can only attack
+          the the tiles/nodes that are facing them. They cannot shoot through them to get at a node
+          in the back.
+        </p>
+
+        <img src="https://i.imgur.com/JjSOyOF.png" style="width:90vw; height:auto;">
+
+        <p>
+          <b>Ranged Attack Resistance</b>
+        </p>
+
+        <p>
+          Nodes get +1 defense die against all ranged attacks.
+          Cores get +2 defense dice against all ranged attacks.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- <script src="index.js"></script> -->
   </body>
+
 </html>
