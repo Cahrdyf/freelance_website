@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+.shape {
+  width: 95vw;
+  height: 95vh;
+  background-color: transparent;
+  position: fixed;
+  top: -55vw;
+  left: -23vw;
+  z-index: 5;
+}
+
+.shape-inner {
+  width: 68vw;
+  height: 68vh;
+  background-color: transparent;
+  position: fixed;
+  top: 6vw;
+  left: 25vw;
+  z-index: 2;
+}
+
+.shape img {
+  margin: 0 25vw;
+}
+
+.over-text {
+  opacity: 1;
+  animation-name: fade;
+  animation-duration: 3s;
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+  position: fixed;
+  font-size: 1.8vw;
+  color: white;
+  margin: 20vw 0 0 37vw;
+  z-index: 5;
+}
+
+@keyframes fade{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+.dot-arrow {
+  opacity: 0;
+  position: fixed;
+  margin: 22vw 0 0 37vw;
+  z-index: 5;
+  display: flex;
+  align-self: flex-end;
+  transition: opacity 1s;
+}
+
+.dot-arrow svg circle{
+  fill: #ededed;
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.dot-arrow svg polygon{
+  fill: #ededed;
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flash{
+  from {fill: #ededed;}
+  to{fill: transparent;}
+}
+
+
+.proceed-button {
+  opacity: 0;
+  position: fixed;
+  width: 12vw;
+  font-size: 1.0vw;
+  border: 2px solid white;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  z-index: 6;
+  top: 24vw;
+  left: 37vw;
+  transition: background-color 1s, border 1s;
+}
+
+.proceed-button:hover {
+  background-color: rgb(220, 20, 50, 1);
+  border: 2px solid white;
+}
+
+.blankCanvas {
+  background-color: black;
+  padding: 100em 0;
+}
+
+.signature {
+  position: fixed; 
+  z-index: 8; 
+  color: white; 
+  top: 2vw; 
+  left: 82vw; 
+  font-family: 'Times New Roman', sans-serif; 
+  font-weight: bolder; 
+  font-size: 16px;
+}
+
+
+
+@media screen and (max-width:800px) {
+	
+  .blankCanvas {
+    background-color: black;
+    padding-bottom: 100em;
+  }
+
+  .signature {
+    left: 35vw;
+    font-size: 12px;
+  }
+  
+  .over-text {
+    font-size: 10.8vw;
+    margin: 40vw 0 0 30vw;
+  }
+  .proceed-button {
+    font-size: 5.5vw;
+    width: 40vw;
+    top: 146vw;
+    left: 30vw;
+  }
+  .dot-arrow {
+    margin: 22vw 0 0 32vw;
+  }
+
+  .shape img{
+    margin: 54vw 26vw 0 26vw;
+	height: auto;
+	width: 200vw;
+	position: fixed;
+  }
+  
+  .shape {
+	top: -120vw;
+    left: -65vw;
+	width: 95vw;
+    height: 95vh;
+  }
+
+  .shape-inner {
+    background-color: transparent;
+    position: fixed;
+    top: 48vw;
+    left: 5vw;
+    z-index: 2;
+  }
+  .shape-inner img {
+    width: 118vw;
+	height: auto;
+    margin: 14vw 0 0 0;
+  }
+}
