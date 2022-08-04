@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Parallax Effect (CSS).">	
+    <title>Explore</title>
+    <link rel="stylesheet" href="css\style.css">
+    <script src="js\test.js"></script>
+  </head>
+  <body>
+	<div id="shape" class="shape">
+	  <img id="shape-img" src="img\window.png">
+	</div>
+	<div id="shape-inner" class="shape-inner">
+	  <img src="img\landscape.jpg">
+	</div>
+	<div class="over-text">
+	  <h3>Explore.</h3>
+	</div>
+	<div class="proceed-btn">
+	  <button id="proceed-btn" class="proceed-button" onmouseover="showDotArrow();" onmouseout="hideDotArrow();">
+	    <a href="#">Click here to begin</a>
+	  </button>
+	</div>
+	<div id="dot-arrow" class="dot-arrow">
+	  <svg width="100" height="100">
+        <circle cx="30" cy="85" r="6" stroke="#ededed" stroke-width="1" fill="#ededed" />
+		<circle cx="50" cy="85" r="6" stroke="#ededed" stroke-width="1" fill="#ededed" />
+		<circle cx="70" cy="85" r="6" stroke="#ededed" stroke-width="1" fill="#ededed" />
+		<polygon points="85,100 85,70 110,85" style="fill:#ededed;stroke:#ededed;stroke-width:1" />
+      Inline SVG not suppported!
+      </svg> 
+	</div>
+	<div id="blankCanvas" class="blankCanvas"></div>
+	<div id="signature" class="signature">Made by Jonathan Tolentino</div>
+  </body>
+
+</html>
