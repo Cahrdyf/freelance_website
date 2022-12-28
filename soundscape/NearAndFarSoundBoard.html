@@ -52,11 +52,15 @@
             <div class="buttons">
 
               <button onClick="changeVid('FFXVWT');">
-                <span style="font-size: 2em; padding: 2em;">FF XV World Theme</span>
+                <span style="font-size: 2em; padding: 0em;">FF XV World Theme</span>
               </button>
               <br><br>
               <button onClick="changeVid('TerraTheme');">
-                <span style="font-size: 2em; padding: 2em;">Terra's Theme</span>
+                <span style="font-size: 2em; padding: 0em;">Terra's Theme</span>
+              </button>
+              <br><br>
+              <button onClick="changeVid('FF3World');">
+                <span style="font-size: 2em; padding: 0em;">FF3 World Theme</span>
               </button>
 
             </div>
@@ -65,7 +69,22 @@
 
         <div id="Battle">
           <div class="inner">
+            <h2>Battle</h2>
+            <div class="buttons">
 
+              <button onClick="changeVid('FF6BT');">
+                <span style="font-size: 2em; padding: 0em;">FF6 Battle Theme</span>
+              </button>
+              <br><br>
+              <button onClick="changeVid('XenogearsBat');">
+                <span style="font-size: 2em; padding: 0em;">Xenogears Battle</span>
+              </button>
+              <br><br>
+              <button onClick="changeVid('FF6BT');">
+                <span style="font-size: 2em; padding: 0em;">FF3 World Theme</span>
+              </button>
+
+            </div>
           </div>
         </div>
       </div>
@@ -88,12 +107,34 @@
       let cont = "controls=0";
 
       function changeVid(a) {
-        if (a == "FFXVWT") {
-          vidId = "4-kBl58yzko"
+        switch (a) {
+        
+          case "FFXVWT":
+            vidId = "4-kBl58yzko";
+            break;
+
+          case "TerraTheme":
+            vidId = "HgXwuDyCTfk";
+            break;
+
+          case "FF3World":
+            vidId = "QCXzyt7Wu_o";
+            break;
+
+            // BATTLE MUSIC
+          case "FF6BT":
+            vidId = "LKONQ4UZte0";
+            break;
+            
+          case "XenogearsBat":
+            vidId = "59i8zjegr70";
+            break;
+            
+          case "FF6BT":
+            vidId = "LKONQ4UZte0";
+            break;
         }
-        if (a == "TerraTheme") {
-          vidId = "HgXwuDyCTfk"
-        }
+
         let b = prefix.concat(vidId, q, autoplay, loop, cont);
         x.setAttribute("src", b);
       }
