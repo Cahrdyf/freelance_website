@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
+    <title>Fantasy Soundscape</title>
     <link rel="stylesheet" href="style.css">
     <style>
       * {
@@ -66,18 +66,24 @@
               <button onClick="changeVid('FFXVWT');">
                 <span style="font-size: 2em; padding: 0em;">FF XV World Theme</span>
               </button>
-              <br><br>
+              <br><br><br>
               <button onClick="changeVid('TerraTheme');">
                 <span style="font-size: 2em; padding: 0em;">Terra's Theme</span>
               </button>
-              <br><br>
+              <br><br><br>
               <button onClick="changeVid('FF3World');">
                 <span style="font-size: 2em; padding: 0em;">FF3 World Theme</span>
               </button>
-              <br><br>
+              <br><br><br>
               <button onClick="changeVid('Smudged');">
                 <span style="font-size: 2em; padding: 0em;">Old Smudged Map</span>
               </button>
+              <br><br><br>
+              <button onClick="changeVid('GreyjoyTheme');">
+                <span style="font-size: 2em; padding: 0em;">AGOT Greyjoy Theme</span>
+              </button>
+
+
 
             </div>
           </div>
@@ -91,18 +97,24 @@
               <button onClick="changeVid('FF6BT');">
                 <span style="font-size: 2em; padding: 0em;">FF6 Battle Theme</span>
               </button>
-              <br><br>
+              <br><br><br>
               <button onClick="changeVid('XenogearsBat');">
                 <span style="font-size: 2em; padding: 0em;">Xenogears Battle</span>
               </button>
-              <br><br>
+              <br><br><br>
               <button onClick="changeVid('FF7Battle');">
                 <span style="font-size: 2em; padding: 0em;">FF7 Battle</span>
               </button>
-              <br><br>
+              <br><br><br>
               <button onClick="changeVid('DOTA2B1');">
                 <span style="font-size: 2em; padding: 0em;">DOTA 2 Battle 1</span>
               </button>
+              <br><br><br>
+              <button onClick="changeVid('GOTbastard');">
+                <span style="font-size: 2em; padding: 0em;">AGOT Bastard</span>
+              </button>
+
+
 
             </div>
             <br><br><br><br><br><br><br><br><br><br><br><br>
@@ -146,6 +158,10 @@
             vidId = "eXA3_7qzjRA";
             break;
 
+          case "GreyjoyTheme":
+            vidId = "cryc0eDPEFY";
+            break;
+
 
 
             // BATTLE MUSIC
@@ -164,6 +180,14 @@
           case "DOTA2B1":
             vidId = "Uo9mEYuM2Mc";
             break;
+
+          case "GOTbastard":
+            vidId = "du3AS8pcy-4";
+            break;
+
+
+
+
         }
 
         let b = prefix.concat(vidId, q, autoplay, loop, cont);
