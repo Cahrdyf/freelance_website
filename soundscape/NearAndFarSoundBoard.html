@@ -44,6 +44,11 @@
         text-align: center;
       }
 
+      button {
+        color: white;
+        background-color: purple;
+      }
+
     </style>
   </head>
 
@@ -69,6 +74,10 @@
               <button onClick="changeVid('FF3World');">
                 <span style="font-size: 2em; padding: 0em;">FF3 World Theme</span>
               </button>
+              <br><br>
+              <button onClick="changeVid('Smudged');">
+                <span style="font-size: 2em; padding: 0em;">Old Smudged Map</span>
+              </button>
 
             </div>
           </div>
@@ -87,17 +96,22 @@
                 <span style="font-size: 2em; padding: 0em;">Xenogears Battle</span>
               </button>
               <br><br>
-              <button onClick="changeVid('FF6BT');">
-                <span style="font-size: 2em; padding: 0em;">FF3 World Theme</span>
+              <button onClick="changeVid('FF7Battle');">
+                <span style="font-size: 2em; padding: 0em;">FF7 Battle</span>
+              </button>
+              <br><br>
+              <button onClick="changeVid('DOTA2B1');">
+                <span style="font-size: 2em; padding: 0em;">DOTA 2 Battle 1</span>
               </button>
 
             </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
           </div>
         </div>
       </div>
       <div id="video">
         <div id="video_inner">
-          <iframe allow="autoplay" autoplay loop id="player" width="420" height="120" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+          <iframe allow="autoplay" autoplay loop id="player" width="320" height="120" src="https://www.youtube.com/embed/tgbNymZ7vqY">
           </iframe>
         </div>
       </div>
@@ -128,6 +142,12 @@
             vidId = "QCXzyt7Wu_o";
             break;
 
+          case "Smudged":
+            vidId = "eXA3_7qzjRA";
+            break;
+
+
+
             // BATTLE MUSIC
           case "FF6BT":
             vidId = "LKONQ4UZte0";
@@ -137,13 +157,19 @@
             vidId = "59i8zjegr70";
             break;
 
-          case "FF6BT":
-            vidId = "LKONQ4UZte0";
+          case "FF7Battle":
+            vidId = "oBnIKaafPHY";
+            break;
+
+          case "DOTA2B1":
+            vidId = "Uo9mEYuM2Mc";
             break;
         }
 
         let b = prefix.concat(vidId, q, autoplay, loop, cont);
         x.setAttribute("src", b);
+
+        document.getElementById("player").click();
       }
 
     </script>
