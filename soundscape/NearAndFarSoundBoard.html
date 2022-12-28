@@ -24,8 +24,18 @@
       h2 {
         text-align: center;
       }
-      
-      #video_inner{margin:auto;padding:2em 0;text-align:center;}
+
+      .buttons {
+        text-align: center;
+        margin: 1em;
+        padding: 1em;
+      }
+
+      #video_inner {
+        margin: auto;
+        padding: 2em 0;
+        text-align: center;
+      }
 
     </style>
   </head>
@@ -40,7 +50,15 @@
           <div class="inner">
             <h2>Neutral</h2>
             <div class="buttons">
-              <button onClick="changeVid();">____</button>
+
+              <button onClick="changeVid('FFXVWT');">
+                <span style="font-size: 2em; padding: 2em;">FF XV World Theme</span>
+              </button>
+              <br><br>
+              <button onClick="changeVid('TerraTheme');">
+                <span style="font-size: 2em; padding: 2em;">Terra's Theme</span>
+              </button>
+
             </div>
           </div>
         </div>
@@ -53,39 +71,33 @@
       </div>
       <div id="video">
         <div id="video_inner">
-          <iframe id="player" width="420" 
-                  height="315" 
-                  src="https://www.youtube.com/embed/tgbNymZ7vqY">
+          <iframe id="player" width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY">
           </iframe>
         </div>
       </div>
       <!-- END MAIN -->
     </div>
     <script>
-      function changeVid(){
-        let x = document.getElementById("player");
-        let prefix = "https://www.youtube.com/embed/"
-        let vidId = "aaaaabaaaaa";
-        let andt = "&";
-        let q = "?";
-        let autoplay = "autoplay=1";
-        let loop = "loop=1";
-        let cont = "controls=0";
-        
-        vidId = newVideo();
-        
-        let b = prefix.concat(vidId,q,autoplay,loop,cont); 
-        alert(b);
-        
-        x.setAttribute("src",b);
+      let x = document.getElementById("player");
+      let prefix = "https://www.youtube.com/embed/"
+      let vidId = "aaaaabaaaaa";
+      let andt = "&";
+      let q = "?";
+      let autoplay = "autoplay=1";
+      let loop = "loop=1";
+      let cont = "controls=0";
 
+      function changeVid(a) {
+        if (a == "FFXVWT") {
+          vidId = "4-kBl58yzko"
+        }
+        if (a == "TerraTheme") {
+          vidId = "HgXwuDyCTfk"
+        }
+        let b = prefix.concat(vidId, q, autoplay, loop, cont);
+        x.setAttribute("src", b);
       }
-      
-      function newVideo(){
-        return "4-kBl58yzko";
-      }
-      
-      
+
     </script>
   </body>
 
